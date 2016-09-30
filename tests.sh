@@ -335,48 +335,48 @@ build_javascript() {
 }
 
 build_php5.5_c() {
-  ln -sfn /usr/bin/php5.5 /usr/bin/php
-  ln -sfn /usr/bin/php-config5.5 /usr/bin/php-config
-  ln -sfn /usr/bin/phpize5.5 /usr/bin/phpize
+  cp /usr/bin/php5.5 `which php`
+  cp /usr/bin/php-config5.5 `which php-config`
+  cp /usr/bin/phpize5.5 `which phpize`
   cd php/tests && /bin/bash ./test.sh && cd ../..
 }
 
 build_php5.5() {
-  ln -sfn /usr/bin/php5.5 /usr/bin/php
-  ln -sfn /usr/bin/php-config5.5 /usr/bin/php-config
-  ln -sfn /usr/bin/phpize5.5 /usr/bin/phpize
+  cp /usr/bin/php5.5 `which php`
+  cp /usr/bin/php-config5.5 `which php-config`
+  cp /usr/bin/phpize5.5 `which phpize`
   rm -rf vendor
   cp -r /usr/local/vendor-5.5 vendor
   ./vendor/bin/phpunit
 }
 
 build_php5.6_c() {
-  ln -sfn /usr/bin/php5.6 /usr/bin/php
-  ln -sfn /usr/bin/php-config5.6 /usr/bin/php-config
-  ln -sfn /usr/bin/phpize5.6 /usr/bin/phpize
+  cp /usr/bin/php5.6 `which php`
+  cp /usr/bin/php-config5.6 `which php-config`
+  cp /usr/bin/phpize5.6 `which phpize`
   cd php/tests && /bin/bash ./test.sh && cd ../..
 }
 
 build_php5.6() {
-  ln -sfn /usr/bin/php5.6 /usr/bin/php
-  ln -sfn /usr/bin/php-config5.6 /usr/bin/php-config
-  ln -sfn /usr/bin/phpize5.6 /usr/bin/phpize
+  cp /usr/bin/php5.6 `which php`
+  cp /usr/bin/php-config5.6 `which php-config`
+  cp /usr/bin/phpize5.6 `which phpize`
   rm -rf vendor
   cp -r /usr/local/vendor-5.6 vendor
   ./vendor/bin/phpunit
 }
 
 build_php7.0_c() {
-  ln -sfn /usr/bin/php7.0 /usr/bin/php
-  ln -sfn /usr/bin/php-config7.0 /usr/bin/php-config
-  ln -sfn /usr/bin/phpize7.0 /usr/bin/phpize
+  cp /usr/bin/php7.0 `which php`
+  cp /usr/bin/php-config7.0 `which php-config`
+  cp /usr/bin/phpize7.0 `which phpize`
   cd php/tests && /bin/bash ./test.sh && cd ../..
 }
 
 build_php7.0() {
-  ln -sfn /usr/bin/php7.0 /usr/bin/php
-  ln -sfn /usr/bin/php-config7.0 /usr/bin/php-config
-  ln -sfn /usr/bin/phpize7.0 /usr/bin/phpize
+  cp /usr/bin/php7.0 `which php`
+  cp /usr/bin/php-config7.0 `which php-config`
+  cp /usr/bin/phpize7.0 `which phpize`
   rm -rf vendor
   cp -r /usr/local/vendor-7.0 vendor
   ./vendor/bin/phpunit
